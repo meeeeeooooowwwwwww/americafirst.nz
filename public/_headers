@@ -1,0 +1,5 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://rumble.com https://*.rumble.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://rumble.com https://*.rumble.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://rumble.com https://*.rumble.com; media-src 'self'; font-src 'self' data:; base-uri 'self'; form-action 'self';
