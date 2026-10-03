@@ -3,5 +3,15 @@
   "compatibility_date": "2026-08-16",
   "assets": {
     "directory": "./public"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "americafirst.nz",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.americafirst.nz",
+      "custom_domain": true
+    }
+  ]
 }
