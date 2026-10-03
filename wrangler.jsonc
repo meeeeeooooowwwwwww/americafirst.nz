@@ -8,10 +8,6 @@
     {
       "pattern": "americafirst.nz",
       "custom_domain": true
-    },
-    {
-      "pattern": "www.americafirst.nz",
-      "custom_domain": true
     }
   ]
 }
