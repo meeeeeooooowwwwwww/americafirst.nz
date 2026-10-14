@@ -177,6 +177,71 @@ a {
 }
 
 
+@media (max-width: 640px) {
+  .site-shell {
+    grid-template-rows: 52px minmax(0, 1fr) 46px;
+  }
+
+  .site-header {
+    justify-content: center;
+    padding: 0 14px;
+  }
+
+  .top-nav {
+    gap: 28px;
+  }
+
+  .top-nav a {
+    font-size: .76rem;
+    letter-spacing: .16em;
+  }
+
+  .video-stage {
+    padding: 12px 12px;
+    overflow: visible;
+    gap: 13px;
+  }
+
+  .video-frame {
+    width: min(
+      calc(100vw - 24px),
+      calc((100dvh - 52px - 46px - 160px) * 16 / 9)
+    );
+    max-width: 100%;
+  }
+
+  .site-footer {
+    min-height: 46px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .footer-nav {
+    width: 100%;
+    justify-content: center;
+    gap: clamp(9px, 2.8vw, 16px);
+  }
+
+  .footer-nav a {
+    font-size: clamp(.56rem, 2.25vw, .66rem);
+    letter-spacing: .025em;
+  }
+}
+
+@media (max-width: 380px) {
+  .top-nav {
+    gap: 22px;
+  }
+
+  .footer-nav {
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    font-size: .54rem;
+  }
+}
+
 /* Five advertiser-wordmark cards. These are retailer referrals, not endorsements. */
 .designer-section {
   width: min(1050px, 100%);
@@ -289,71 +354,6 @@ a {
   .video-stage { gap: 7px; padding-block: 8px; }
   .affiliate-note { margin-top: 5px; }
   .video-frame { width: min(1680px, calc(100vw - 36px), calc((100dvh - 58px - 48px - 100px) * 16 / 9)); }
-}
-
-@media (max-width: 640px) {
-  .site-shell {
-    grid-template-rows: 52px minmax(0, 1fr) 46px;
-  }
-
-  .site-header {
-    justify-content: center;
-    padding: 0 14px;
-  }
-
-  .top-nav {
-    gap: 28px;
-  }
-
-  .top-nav a {
-    font-size: .76rem;
-    letter-spacing: .16em;
-  }
-
-  .video-stage {
-    padding: 12px 12px;
-    overflow: visible;
-    gap: 13px;
-  }
-
-  .video-frame {
-    width: min(
-      calc(100vw - 24px),
-      calc((100dvh - 52px - 46px - 160px) * 16 / 9)
-    );
-    max-width: 100%;
-  }
-
-  .site-footer {
-    min-height: 46px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .footer-nav {
-    width: 100%;
-    justify-content: center;
-    gap: clamp(9px, 2.8vw, 16px);
-  }
-
-  .footer-nav a {
-    font-size: clamp(.56rem, 2.25vw, .66rem);
-    letter-spacing: .025em;
-  }
-}
-
-@media (max-width: 380px) {
-  .top-nav {
-    gap: 22px;
-  }
-
-  .footer-nav {
-    gap: 8px;
-  }
-
-  .footer-nav a {
-    font-size: .54rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
