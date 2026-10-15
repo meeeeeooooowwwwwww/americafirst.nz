@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://americafirst.nz/sitemap.xml
