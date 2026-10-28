@@ -37,7 +37,7 @@ jobs:
           node-version: 24
       - name: Guard own Cloudflare script and production domain
         run: |
-          node -e "const c=require('./wrangler.jsonc'); if(c.name!=='americafirst-nz-site') throw Error('Wrong Worker'); if(!Array.isArray(c.routes)||c.routes.length!==1||c.routes[0].pattern!=='americafirst.nz') throw Error('Unexpected route target');"
+          node -e "const c=JSON.parse(require('node:fs').readFileSync('wrangler.jsonc','utf8')); if(c.name!=='americafirst-nz-site') throw Error('Wrong Worker'); if(!Array.isArray(c.routes)||c.routes.length!==1||c.routes[0].pattern!=='americafirst.nz') throw Error('Unexpected route target');"
       - name: Rebuild social share image from repository source
         run: |
           set -euo pipefail
@@ -69,4 +69,4 @@ jobs:
         run: |
           set -euo pipefail
           curl --fail --silent --show-error --location --max-time 30 https://americafirst.nz/ -o "$RUNNER_TEMP/home.html"
-          grep -Fqi 'America First' "$RUNNER_TEMP/home.html"
+          grep -Fq 'https://www.youtube.com/embed/HTzGMEfbnAw' "$RUNNER_TEMP/home.html"
