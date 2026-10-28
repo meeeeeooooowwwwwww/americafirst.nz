@@ -69,4 +69,5 @@ jobs:
         run: |
           set -euo pipefail
           curl --fail --silent --show-error --location --max-time 30 https://americafirst.nz/ -o "$RUNNER_TEMP/home.html"
-          grep -Fq 'https://www.youtube.com/embed/HTzGMEfbnAw' "$RUNNER_TEMP/home.html"
+          grep -Fq 'https://www.youtube.com/embed/OY7O_OeyaI8' "$RUNNER_TEMP/home.html"
+          ! grep -Fq '<header class="site-header">' "$RUNNER_TEMP/home.html"
