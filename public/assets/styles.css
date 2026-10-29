@@ -84,3 +84,7 @@ a { color:inherit; text-decoration:none; }
   .footer-nav { flex-wrap:wrap; row-gap:8px; }
 }
 @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+
+/* Concise founder attribution without changing the video-first layout. */
+.site-footer .footer-founder{font-size:.78rem;text-align:center;line-height:1.65;color:#b5b5b5;margin:14px auto 0;max-width:740px;padding:0 16px}
+.site-footer .footer-founder a{color:inherit;text-underline-offset:3px}
