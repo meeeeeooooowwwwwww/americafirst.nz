@@ -88,3 +88,18 @@ a { color:inherit; text-decoration:none; }
 /* Concise founder attribution without changing the video-first layout. */
 .site-footer .footer-founder{font-size:.78rem;text-align:center;line-height:1.65;color:#b5b5b5;margin:14px auto 0;max-width:740px;padding:0 16px}
 .site-footer .footer-founder a{color:inherit;text-underline-offset:3px}
+
+/* Contextual links below video content; preserve uninterrupted video-first hero. */
+.venture-context{padding:45px 20px 35px;background:#0c0d11;color:#e7e7e7}
+.venture-context-inner{max-width:1120px;margin:0 auto}
+.venture-context-intro{max-width:760px;margin-bottom:25px}
+.venture-context-intro>span{color:#aaa;font:700 .73rem/1.6 system-ui,sans-serif;letter-spacing:.12em}
+.venture-context-intro h2{font:700 clamp(1.5rem,3.1vw,2.4rem)/1.18 system-ui,sans-serif;margin:.4rem 0 .7rem}
+.venture-context-intro p{line-height:1.6;color:#b8b8b8}
+.venture-context-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.venture-context-grid a{display:flex;flex-direction:column;gap:10px;min-height:168px;padding:22px;background:#17181d;border:1px solid #41434b;border-radius:14px;color:#fff;text-decoration:none}
+.venture-context-grid a:focus-visible,.venture-context-grid a:hover{border-color:#a4a8b3;background:#21242c}
+.venture-context-grid strong{font:700 1.05rem system-ui,sans-serif}
+.venture-context-grid small{font:400 .88rem/1.55 system-ui,sans-serif;color:#c1c4cc}
+.venture-context-grid a span{margin-top:auto;color:#f1efef;font:700 .8rem system-ui,sans-serif}
+@media(max-width:750px){.venture-context-grid{grid-template-columns:1fr}.venture-context-grid a{min-height:128px}.venture-context{padding-top:28px}}
