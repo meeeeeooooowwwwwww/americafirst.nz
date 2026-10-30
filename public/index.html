@@ -71,6 +71,7 @@
       <div class="video-frame">
         <iframe
           class="featured-video-player"
+          src="https://www.youtube.com/embed/xKcbYUwmmlE"
           title="America First featured video"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
@@ -84,7 +85,10 @@
               'https://www.youtube.com/embed/LvetJ9U_tVY'
             ];
             const chosenUrl = videoUrls[Math.floor(Math.random() * videoUrls.length)];
-            document.querySelector('.featured-video-player').src = chosenUrl;
+            const player = document.querySelector('.featured-video-player');
+            if (player && player.getAttribute('src') !== chosenUrl) {
+              player.src = chosenUrl;
+            }
           })();
         </script>
       </div>

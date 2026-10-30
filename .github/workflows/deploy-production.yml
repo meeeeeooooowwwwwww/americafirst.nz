@@ -72,5 +72,6 @@ jobs:
           grep -Fq 'https://www.youtube.com/embed/xKcbYUwmmlE' "$RUNNER_TEMP/home.html"
           grep -Fq 'https://www.youtube.com/embed/LvetJ9U_tVY' "$RUNNER_TEMP/home.html"
           grep -Fq 'Math.random()' "$RUNNER_TEMP/home.html"
+          grep -Fq 'src="https://www.youtube.com/embed/xKcbYUwmmlE"' "$RUNNER_TEMP/home.html"
           ! grep -Fq 'https://www.youtube.com/embed/OY7O_OeyaI8' "$RUNNER_TEMP/home.html"
           ! grep -Fq '<header class="site-header">' "$RUNNER_TEMP/home.html"
