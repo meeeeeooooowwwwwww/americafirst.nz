@@ -71,13 +71,22 @@
       <div class="video-frame">
         <iframe
           class="featured-video-player"
-          src="https://www.youtube.com/embed/OY7O_OeyaI8"
           title="America First featured video"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
           allowfullscreen
           loading="eager"
         ></iframe>
+        <script>
+          (() => {
+            const videoUrls = [
+              'https://www.youtube.com/embed/xKcbYUwmmlE',
+              'https://www.youtube.com/embed/LvetJ9U_tVY'
+            ];
+            const chosenUrl = videoUrls[Math.floor(Math.random() * videoUrls.length)];
+            document.querySelector('.featured-video-player').src = chosenUrl;
+          })();
+        </script>
       </div>
       <section class="designer-section" aria-label="Featured designer brands at Seymayka">
         <div class="designer-cards">
