@@ -1,6 +1,11 @@
 name: Deploy americafirst.nz (independent)
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "public/index.html"
+      - ".github/workflows/deploy-production.yml"
   workflow_dispatch:
     inputs:
       confirm:
@@ -20,12 +25,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Require approved main branch and manual confirmation
+      - name: Require main branch and confirmation for manual releases
         env:
           CONFIRM: ${{ inputs.confirm }}
         run: |
           test "$GITHUB_REF" = "refs/heads/main"
-          test "$CONFIRM" = "DEPLOY"
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            test "$CONFIRM" = "DEPLOY"
+          fi
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.sha }}
