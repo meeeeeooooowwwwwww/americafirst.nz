@@ -71,12 +71,12 @@ a { color:inherit; text-decoration:none; }
 }
 .footer-designer-logos a {
   display:inline-flex; align-items:center; justify-content:center;
-  flex:0 0 auto; line-height:0; padding:1px 0; opacity:.7;
+  flex:0 0 auto; line-height:0; padding:1px 0; opacity:.96;
 }
 .footer-designer-logos a:hover,.footer-designer-logos a:focus-visible { opacity:1; outline-offset:3px; }
 .footer-designer-logos img {
   display:block; width:auto; height:clamp(11px,1.15vw,15px); max-width:90px;
-  object-fit:contain; filter:invert(86%) sepia(12%) saturate(383%) hue-rotate(353deg) brightness(96%);
+  object-fit:contain; filter:grayscale(1) invert(97%) brightness(1.1);
 }
 .footer-designer-logos a:first-child img,.footer-designer-logos a:nth-child(3) img { height:clamp(15px,1.6vw,20px); }
 @media (max-width:760px) {
