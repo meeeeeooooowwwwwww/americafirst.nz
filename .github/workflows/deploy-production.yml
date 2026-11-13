@@ -82,8 +82,10 @@ jobs:
           ! grep -Fq 'https://www.youtube.com/embed/LvetJ9U_tVY' "$RUNNER_TEMP/home.html"
           ! grep -Fq 'Math.random()' "$RUNNER_TEMP/home.html"
           ! grep -Fq 'class="designer-section"' "$RUNNER_TEMP/home.html"
-          ! grep -Fq 'jdoqocy.com/click-101217399-15736030' "$RUNNER_TEMP/home.html"
-          ! grep -Fq '/assets/brands/' "$RUNNER_TEMP/home.html"
+          test "$(grep -Foc 'https://www.jdoqocy.com/click-101217399-15736030' "$RUNNER_TEMP/home.html")" -eq 1
+          grep -Fq 'class="footer-gucci-affiliate"' "$RUNNER_TEMP/home.html"
+          test "$(grep -Foc '/assets/brands/' "$RUNNER_TEMP/home.html")" -eq 1
+          grep -Fq 'src="/assets/brands/gucci-mark.svg"' "$RUNNER_TEMP/home.html"
           ! grep -Fq 'BEHIND THE MEDIA' "$RUNNER_TEMP/home.html"
           ! grep -Fq 'class="venture-context"' "$RUNNER_TEMP/home.html"
           ! grep -Fq 'https://www.youtube.com/embed/OY7O_OeyaI8' "$RUNNER_TEMP/home.html"
